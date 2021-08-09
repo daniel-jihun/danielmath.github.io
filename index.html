@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="square-container-container">
+        <div class="square-container">
+            <div class="square one"><h1 id="title"></h1></div>
+            <div class="square two"><h1 id="definition"></h1></div>
+        </div>
+        <div class="square-container container2">
+            <div class="square three"><h1 id="icon"></h1></div>
+            <div class="square four"><h1 id="history"></h1></div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { data } from "./data.js";
+        const title = document.getElementById("title")
+        const definition = document.getElementById("definition")
+        const icon = document.getElementById("icon")
+        const history = document.getElementById("history")
+        const select = document.querySelectorAll("select")[0]
+        select.onchange = updateSelectValue()
+        select.onchange = () => {
+            updateSelectValue()
+        }
+        var i = 0
+        function updateSelectValue() {
+            i = select.selectedIndex
+            console.log(i)
+            title.innerText = data[i].name
+            definition.innerText = "정의: " + data[i].definition
+            icon.innerText = data[i].icon
+            history.innerText = "역사: " + data[i].history
+            
+        }
+    </script>
+    <div>
+        <label>Choose</label>
+        <select id="select"></select>
+    </div>
+</body>
+</html>

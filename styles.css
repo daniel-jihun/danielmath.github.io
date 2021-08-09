@@ -1,0 +1,39 @@
+.square {
+    border: 1px solid black;
+    display: flex;
+}
+
+.one {
+    width: 38.197%;
+    background-color: antiquewhite;
+}
+
+.two {
+    width: 61.803%;
+    background-color: dimgrey;
+}
+
+.three {
+    width: 38.197%;
+    background-color: dimgrey;
+}
+
+.four {
+    width: 61.803%;
+    font-size:xx-small;
+    background-color: antiquewhite;
+}
+
+.square-container {
+    display: flex;
+    height: 38.197%;
+}
+
+.container2 {
+    display: flex;
+    height: 61.803%;
+}
+
+.square-container-container {
+    height: 90vh;
+}
